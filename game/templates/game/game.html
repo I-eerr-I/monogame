@@ -1,0 +1,26 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Игра</title>
+      <!-- axios.js -->
+    <script type="text/javascript" src="../../static/vue/axios.min.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    {% csrf_token %}
+    <canvas id="canvas" width="3840" height="2160"></canvas>
+    <script type="text/javascript" src={% static "game/js/game.js" %}></script>
+  </body>
+</html>
